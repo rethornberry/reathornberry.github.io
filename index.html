@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rea | Particle Physics</title>
+  <meta name="description" content="Rea — PhD student working on the ATLAS detector. Higgs physics, ML for HEP, and collaborative science." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='80'%3E⚛️%3C/text%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#111111; --muted:#5b5b5b; --link:#1f6feb; --card:#f6f8fa; --border:#e5e7eb;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b0f17; --fg:#e6edf3; --muted:#9aa6b2; --link:#7aa2f7; --card:#0f1724; --border:#1f2937; }
+    }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    a{ color:var(--link); text-decoration-thickness: .08em; text-underline-offset: 2px; }
+    header{ position:sticky; top:0; backdrop-filter:saturate(150%) blur(6px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border); z-index:5; }
+    .nav{ max-width:980px; margin:0 auto; display:flex; align-items:center; gap:1rem; padding:.8rem 1rem; }
+    .nav .brand{ font-weight:700; letter-spacing:.2px; }
+    .nav a{ text-decoration:none; color:var(--fg); opacity:.85; }
+    .nav .spacer{ flex:1; }
+    .nav .menu a{ margin-left:1rem; opacity:.75; }
+    main{ max-width:980px; margin:0 auto; padding:2rem 1rem 4rem; }
+    .hero{ display:grid; grid-template-columns: 120px 1fr; gap:1.25rem; align-items:center; margin-top:1rem; }
+    .avatar{ width:110px; height:110px; border-radius:50%; object-fit:cover; border:2px solid var(--border); background:var(--card); }
+    h1{ font-size:clamp(1.6rem, 2.6vw, 2.2rem); line-height:1.2; margin:.2rem 0 .2rem; }
+    .subtitle{ color:var(--muted); }
+    section{ margin-top:2.2rem; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:1.2rem; }
+    section h2{ margin:.2rem 0 1rem; font-size:1.1rem; letter-spacing:.2px; }
+    ul{ margin:.2rem 0 .4rem 1.2rem; }
+    .grid{ display:grid; gap:1rem; }
+    @media(min-width:800px){ .grid.two{ grid-template-columns:1fr 1fr; } }
+    .badge{ display:inline-block; font-size:.8rem; padding:.2rem .5rem; border:1px solid var(--border); border-radius:999px; background:transparent; color:var(--muted); }
+    .pill-links a{ display:inline-block; padding:.35rem .7rem; border:1px solid var(--border); border-radius:999px; margin:.25rem .35rem .25rem 0; text-decoration:none; }
+    footer{ max-width:980px; margin:2rem auto 3rem; padding:0 1rem; color:var(--muted); }
+    .small{ font-size:.95rem; }
+    .kudos{ font-size:.9rem; color:var(--muted); }
+    code{ background:rgba(127,127,127,.12); padding:.1rem .35rem; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#top">Rea</a>
+      <span class="spacer"></span>
+      <div class="menu small">
+        <a href="#about">About</a>
+        <a href="#talks">Talks</a>
+        <a href="#pubs">Publications</a>
+        <a href="#notes">Notes</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/0?v=4" alt="Portrait placeholder" />
+      <div>
+        <h1>Rea — PhD student at ATLAS</h1>
+        <p class="subtitle">Higgs physics, multi lepton analyses, and ML for HEP. Based in Geneva.</p>
+        <div class="pill-links small">
+          <a href="#contact" title="Email">Email</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a>
+          <a href="https://inspirehep.net/" target="_blank" rel="noopener">InspireHEP</a>
+          <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a PhD student working on the ATLAS detector. My research focuses on Higgs pair production and machine learning for event classification. I like building reproducible analysis workflows and writing tutorial style docs that help others get started quickly.
+      </p>
+      <p class="small">
+        Current interests: HH in multi lepton final states, neutral particle flow isolation, robust parameterizations (kappa, EFT, STXS), and practical tools for training and evaluation.
+      </p>
+    </section>
+
+    <section id="highlights">
+      <h2>Highlights</h2>
+      <div class="grid two">
+        <div>
+          <div class="badge">Slides</div>
+          <p class="small"><strong>Recap of HL LHC Projections</strong> — opening talk at HH Workshop. <a href="#">Slides</a>.</p>
+          <p class="small"><strong>Kappa interpretations</strong> talk at NRML Workshop. <a href="#">Slides</a>.</p>
+        </div>
+        <div>
+          <div class="badge">Notes</div>
+          <p class="small">GNN to Synapse tutorial for HHML, 2lSC reproduction. <a href="#">Read note</a>.</p>
+          <p class="small">Variable transforms and separation metrics utilities. <a href="#">Docs</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="talks">
+      <h2>Public seminars and talks</h2>
+      <ul>
+        <li><strong>Basics — HH cross section parameterizations</strong> at HHML meeting, 2025. <a href="#">Slides</a> | <a href="#">Recording</a></li>
+        <li><strong>Kappa interpretations</strong>, NRML Workshop, Amsterdam, Apr 2025. <a href="#">Slides</a></li>
+        <li><strong>ATLAS NRML — HL LHC projections</strong>, Mar 2025. <a href="#">Slides</a></li>
+      </ul>
+    </section>
+
+    <section id="pubs">
+      <h2>Publications and public results</h2>
+      <ul>
+        <li>ATLAS Collaboration. <em>Search for Higgs boson pair production</em>... <a href="#">paper</a> | <a href="#">arXiv</a> | <a href="#">Inspire</a></li>
+        <li>Internal note. <em>Neutral particle flow isolation corrections</em>. <a href="#">note</a></li>
+        <li>Public note. <em>HL LHC HHML study</em>. <a href="#">note</a></li>
+      </ul>
+      <p class="small">Find a full list on <a href="https://inspirehep.net/" target="_blank" rel="noopener">InspireHEP</a> or <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a>.</p>
+    </section>
+
+    <section id="notes">
+      <h2>ATLAS — CMS dictionary</h2>
+      <p class="small">Short translations between collaboration terminology that I find handy.</p>
+      <ul>
+        <li><strong>CAFCore</strong> vs <strong>CMSSW</strong> module roles. <a href="#">note</a></li>
+        <li>Trigger primitive nomenclature quick reference. <a href="#">note</a></li>
+        <li>Run periods and luminosity blocks cheat sheet. <a href="#">note</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <code>rea@example.org</code></p>
+      <p class="small">Also on <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>, <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>, and <a href="https://inspirehep.net/" target="_blank" rel="noopener">InspireHEP</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="kudos">Built with a single HTML file — fast to load and easy to maintain. Inspired by simple academic pages hosted on GitHub Pages.</p>
+  </footer>
+</body>
+</html>
