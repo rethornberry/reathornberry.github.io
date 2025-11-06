@@ -1,44 +1,173 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rea | Photos</title>
-  <link rel="stylesheet" href="style.css"> <!-- optional if you split styling -->
+  <meta name="description" content="Photos from conferences, CERN life, and outreach events." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='80'%3E📷%3C/text%3E%3C/svg%3E">
+  <style>
+    :root{ --bg:#ffffff; --fg:#111111; --muted:#5b5b5b; --link:#1f6feb; --card:#f6f8fa; --border:#e5e7eb; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0b0f17; --fg:#e6edf3; --muted:#9aa6b2; --link:#7aa2f7; --card:#0f1724; --border:#1f2937; } }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; }
+    a{ color:var(--link); text-decoration-thickness:.08em; text-underline-offset:2px; }
+    header{ position:sticky; top:0; backdrop-filter:saturate(150%) blur(6px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border); z-index:5; }
+    .nav{ max-width:980px; margin:0 auto; display:flex; align-items:center; gap:1rem; padding:.8rem 1rem; }
+    .nav a{ text-decoration:none; color:var(--fg); opacity:.85; }
+    .nav .spacer{ flex:1; }
+    main{ max-width:980px; margin:0 auto; padding:2rem 1rem 3rem; }
+    h1{ font-size:clamp(1.6rem, 2.6vw, 2.2rem); line-height:1.2; margin:.2rem 0 .6rem; }
+    .small{ font-size:.95rem; color:var(--muted); }
+
+    /* Photo grid */
+    .photo-grid{ display:grid; gap:1rem; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); }
+    .photo-grid figure{ margin:0; background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+    .photo-grid img{ width:100%; display:block; aspect-ratio:4/3; object-fit:cover; }
+    .photo-grid figcaption{ font-size:.9rem; color:var(--muted); padding:.55rem .75rem .7rem; text-align:center; }
+
+    footer{ max-width:980px; margin:2rem auto 3rem; padding:0 1rem; color:var(--muted); }
+  </style>
 </head>
 <body>
-  <main style="max-width:980px; margin:auto; padding:2rem 1rem;">
+  <header>
+    <nav class="nav">
+      <a href="index.html">← Back</a>
+      <span class="spacer"></span>
+      <a href="#top" aria-label="Top">Photos</a>
+    </nav>
+  </header>
+
+  <main id="top">
     <h1>Photos</h1>
-    <p class="small">Moments from conferences, CERN life, and outreach events.</p>
+    <p class="small">Moments from conferences, ATLAS work, and outreach.</p>
 
-    <div style="display:grid; gap:1rem; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));">
-      <img src="img/HCP_group.jpeg" alt="HCP2025 — group award for the future collider project" style="width:100%; border-radius:12px;">
-      <img src="img/HCP_pres.HEIC" alt="Presenting at the HCP2025 Future Colliders session" style="width:100%; border-radius:12px;">
-      <img src="img/HCP_School_Photo.jpeg" alt="HCP2025 summer school group photo" style="width:100%; border-radius:12px;">
-      <img src="img/SMUATLAS_2025.jpg" alt="The SMU ATLAS Team" style="width:100%; border-radius:12px;">
-      <img src="img/HH_BBQ.HEIC" alt="Di-Higgs Workshop 2025 — the BBQ prep crew" style="width:100%; border-radius:12px;">
-      <img src="img/HH_Brainstorm.jpeg" alt="Brainstorming session setup at the Di-Higgs Workshop 2025" style="width:100%; border-radius:12px;">
-      <img src="img/hhworkshop2025_group.jpg" alt="Di-Higgs Workshop 2025 — collaboration group photo" style="width:100%; border-radius:12px;">
-      <img src="img/HHML_Lunch_June25.jpg" alt="Di-Higgs Multilepton lunch meeting, June 2025" style="width:100%; border-radius:12px;">
-      <img src="img/HH_Workshop_Talk.jpeg" alt="Presenting at the Di-Higgs Workshop 2025" style="width:100%; border-radius:12px;">
-      <img src="img/HiggsPairs_Poster.jpg" alt="Poster session at Higgs Pairs 2025 in Elba" style="width:100%; border-radius:12px;">
-      <img src="img/HiggsPairs_Courier.jpg" alt="Discussion during Higgs Pairs 2025" style="width:100%; border-radius:12px;">
-      <img src="img/HiggsPairs_ATLAS.jpg" alt="ATLAS group at the Higgs Pairs 2025 conference" style="width:100%; border-radius:12px;">
-      <img src="img/HiggsPairs_Group.jpg" alt="Higgs Pairs 2025 — full group photo" style="width:100%; border-radius:12px;">
-      <img src="img/NRMLWorkshop_Talk.jpg" alt="Talk at the NRML Workshop 2025" style="width:100%; border-radius:12px;">
-      <img src="img/NRMLWorkshop_Dinner.jpg" alt="NRML Workshop 2025 dinner" style="width:100%; border-radius:12px;">
-      <img src="img/NRMLWorkshop_Group.jpg" alt="NRML Workshop 2025 — group photo" style="width:100%; border-radius:12px;">
-      <img src="img/atlas_detector_feb2024.jpg" alt="Visit to the ATLAS detector, February 2024" style="width:100%; border-radius:12px;">
-      <img src="img/lhcc_poster.jpg" alt="Poster session at LHCC Week, 2024" style="width:100%; border-radius:12px;">
-      <img src="img/mug.jpg" alt="Coffee mug celebrating my first ATLAS publication, 2024" style="width:100%; border-radius:12px;">
-      <img src="img/HHWorkshop_Brainstorm_2024.jpg" alt="Di-Higgs brainstorming session, 2024" style="width:100%; border-radius:12px;">
-      <img src="img/hhworkshop2024_group.jpg" alt="Di-Higgs Workshop 2024 — collaboration group photo" style="width:100%; border-radius:12px;">
-      <img src="img/egamma_poster.jpg" alt="Talk at EGamma Workshop, 2023" style="width:100%; border-radius:12px;">
-      <img src="img/atlas_detector_jan2023.jpg" alt="First visit underground to the ATLAS detector, 2023" style="width:100%; border-radius:12px;">
-      <img src="img/firstday_office.jpg" alt="First day in the SMU ATLAS office, 2022" style="width:100%; border-radius:12px;">
+    <!-- Note: .jpg images are not universally supported on the web. If any below fail to load, convert to .jpg or .webp. -->
+
+    <div class="photo-grid">
+      <figure>
+        <img src="img/HCP_group.jpeg" alt="HCP 2025 group award for the future collider project" loading="lazy">
+        <figcaption>HCP 2025 — group award for the future collider project.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HCP_pres.jpg" alt="Presenting at the HCP 2025 Future Colliders session" loading="lazy">
+        <figcaption>Presenting at the HCP 2025 Future Colliders session.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HCP_School_Photo.jpeg" alt="HCP 2025 summer school group photo" loading="lazy">
+        <figcaption>HCP 2025 summer school group photo.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/SMUATLAS_2025.jpg" alt="The SMU ATLAS Team" loading="lazy">
+        <figcaption>The SMU ATLAS Team.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HH_BBQ.jpg" alt="Di-Higgs Workshop 2025 — the BBQ prep crew" loading="lazy">
+        <figcaption>Di-Higgs Workshop 2025 — the BBQ prep crew.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HH_Brainstorm.jpeg" alt="Brainstorming session setup at the Di-Higgs Workshop 2025" loading="lazy">
+        <figcaption>Brainstorming session setup at the Di-Higgs Workshop 2025.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/hhworkshop2025_group.jpg" alt="Di-Higgs Workshop 2025 collaboration group photo" loading="lazy">
+        <figcaption>Di-Higgs Workshop 2025 collaboration group photo.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HHML_Lunch_June25.jpg" alt="Di-Higgs Multilepton lunch meeting, June 2025" loading="lazy">
+        <figcaption>Di-Higgs Multilepton lunch meeting, June 2025.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HH_Workshop_Talk.jpeg" alt="Presenting at the Di-Higgs Workshop 2025" loading="lazy">
+        <figcaption>Presenting at the Di-Higgs Workshop 2025.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HiggsPairs_Poster.jpg" alt="Poster session at Higgs Pairs 2025 in Elba" loading="lazy">
+        <figcaption>Poster session at Higgs Pairs 2025 in Elba.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HiggsPairs_Courier.jpg" alt="Discussion during Higgs Pairs 2025" loading="lazy">
+        <figcaption>Discussion during Higgs Pairs 2025.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HiggsPairs_ATLAS.jpg" alt="ATLAS group at the Higgs Pairs 2025 conference" loading="lazy">
+        <figcaption>ATLAS group at the Higgs Pairs 2025 conference.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HiggsPairs_Group.png" alt="Higgs Pairs 2025 full group photo" loading="lazy">
+        <figcaption>Higgs Pairs 2025 full group photo.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/NRMLWorkshop_Talk.jpg" alt="Talk at the NRML Workshop 2025" loading="lazy">
+        <figcaption>Talk at the NRML Workshop 2025.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/NRMLWorkshop_Dinner.jpg" alt="NRML Workshop 2025 dinner" loading="lazy">
+        <figcaption>NRML Workshop 2025 dinner.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/NRMLWorkshop_Group.jpg" alt="NRML Workshop 2025 group photo" loading="lazy">
+        <figcaption>NRML Workshop 2025 group photo.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/atlas_detector_feb2024.jpg" alt="Visit to the ATLAS detector, February 2024" loading="lazy">
+        <figcaption>Visit to the ATLAS detector, February 2024.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/lhcc_poster.jpg" alt="Poster session at LHCC Week, 2024" loading="lazy">
+        <figcaption>Poster session at LHCC Week, 2024.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/mug.jpg" alt="Coffee mug celebrating my first ATLAS publication, 2024" loading="lazy">
+        <figcaption>Coffee mug celebrating my first ATLAS publication, 2024.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/HHWorkshop_Brainstorm_2024.jpg" alt="Di-Higgs brainstorming session, 2024" loading="lazy">
+        <figcaption>Di-Higgs brainstorming session, 2024.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/hhworkshop2024_group.jpg" alt="Di-Higgs Workshop 2024 collaboration group photo" loading="lazy">
+        <figcaption>Di-Higgs Workshop 2024 collaboration group photo.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/egamma_poster.jpg" alt="Talk at EGamma Workshop, 2023" loading="lazy">
+        <figcaption>Talk at EGamma Workshop, 2023.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/atlas_detector_jan2023.jpeg" alt="First visit underground to the ATLAS detector, 2023" loading="lazy">
+        <figcaption>First visit underground to the ATLAS detector, 2023.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/firstday_office.jpg" alt="First day in the SMU ATLAS office, 2022" loading="lazy">
+        <figcaption>First day in the SMU ATLAS office, 2022.</figcaption>
+      </figure>
     </div>
-
-    <p style="margin-top:2rem;"><a href="index.html">← Back to main page</a></p>
   </main>
+
+  <footer>
+    <p class="small">Tip: convert .jpg images to .jpg or .webp for the web. It improves compatibility and load time.</p>
+  </footer>
 </body>
 </html>
